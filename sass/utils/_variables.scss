@@ -1,0 +1,29 @@
+:root {
+  --primary-color: #757575;
+  --title-color: #212121;
+  --accent-color: #2196F3;
+  --white-font-color: #FFFFFF;
+  --header-logo-color: #4e2d2d;
+  --footer-contacts-color: rgba(255, 255, 255, 0.6);
+  --primary-background-color: #FFFFFF;
+  --secondary-background-color: #F5F4FA;
+  --hero-footer-background-color: #2F303A;
+  --hero-background-color: #C4C4C4;
+  --active-btn: #188CE8;
+  --card-border: #EEEEEE;
+  --border-line: #ECECEC;
+  --icon-color: #AFB1B8;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
