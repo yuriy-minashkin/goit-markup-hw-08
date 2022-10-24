@@ -1,6 +1,4 @@
 .features {
-  margin-left: auto;
-  margin-right: auto;
 
   &__title {
     @extend .visually-hidden;
@@ -8,40 +6,49 @@
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
   }
 
-  &__card:not(:last-child) {
-    margin-right: 30px;
+  &__card {
+    width: 100%;
+    height: auto;
+    @media screen and(min-width: 768px) {
+      width: calc((100% - 30px) / 2);
+    }
+    @media screen and(min-width: 1200px) {
+      width: calc((100% - 90px) / 4);
+    }
   }
 
   &__thumb-wrap {
-    width: 270px;
-    height: 120px;
-    border-radius: 4px;
-    margin-bottom: 30px;
     text-align: center;
     padding: 25px 0;
+    border-radius: 4px;
+    margin-bottom: 30px;
     background-color: var(--secondary-background-color);
   }
-
+  
   &__icon {
     width: 70px;
     height: 70px;
   }
 
   &__subtitle {
+    text-align: center;
     font-weight: 700;
     line-height: 1.14;
     text-transform: uppercase;
-    text-align: left;
     color: var(--title-color);
-    width: 270px;
     margin-bottom: 10px;
+    @media screen and(min-width: 768px) {
+      text-align: left;
+    }
   }
 
   &__description {
-    line-height: 1.71;
     text-align: left;
-    width: 270px;
+    line-height: 1.71;
   }
 }

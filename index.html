@@ -13,7 +13,8 @@
   <link rel="stylesheet" href="./css/main.min.css">
   
 </head>
-<body>  
+<body>
+
   <header class="header">
     <div class="container header__container">
       <nav class="nav">
@@ -27,27 +28,75 @@
       <ul class="connect">
         <li class="connect__item">
           <a class="connect__link" href="mailto:info@devstudio.com" lang="en">
-            <svg class="connect__icon" width="16px" height="12px">
+            <svg class="connect__icon connect__icon--mail">
               <use href="./images/icons.svg#icon-envelope"></use>
             </svg>
           info@devstudio.com</a>
         </li>
         <li class="connect__item">
           <a class="connect__link" href="tel:+380961111111">
-            <svg class="connect__icon" width="10px" height="16px">
+            <svg class="connect__icon connect__icon--tel">
               <use href="./images/icons.svg#icon-smartphone"></use>
             </svg>
           +38 096 111 11 11</a>
         </li>
       </ul>
+      <button class="menu__btn menu__btn--open" type="button" data-menu-open>
+        <svg class="menu__icon" width="40px" height="40px">
+          <use href="./images/icons.svg#icon-menu_mob"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="mob-menu is-hidden" data-menu>
+      <button class="menu__btn menu__btn--close" type="button" data-menu-close>
+        <svg class="menu__icon menu__icon--close" width="40px" height="40px">
+          <use href="./images/icons.svg#icon-close_menu_mob"></use>
+        </svg>
+      </button>
+      <ul class="mob-menu__list">
+        <li class="mob-menu__item"><a class="mob-menu__link mob-menu__link--current" href="./index.html">Студія</a></li>
+        <li class="mob-menu__item"><a class="mob-menu__link" href="./portfolio.html">Портфоліо</a></li>
+        <li class="mob-menu__item"><a class="mob-menu__link" href="#">Контакти</a></li>
+      </ul>
+      <div class="mob-bottom-wrap">
+        <ul class="mob-connect">
+          <li class="mob-connect__item">
+            <a class="mob-connect__link mob-connect__link--accent" href="tel:+380961111111">
+              +38 096 111 11 11</a>
+          </li>
+          <li class="mob-connect__item">
+            <a class="mob-connect__link" href="mailto:info@devstudio.com" lang="en">
+              info@devstudio.com</a>
+          </li>
+        </ul>
+        <ul class="mob-socials">
+          <li class="mob-socials__item">
+            <a class="mob-socials__link" href="#">Instagram</a>
+          </li>
+          <li class="mob-socials__item">
+            <a class="mob-socials__link" href="#">Twitter</a>
+          </li>
+          <li class="mob-socials__item">
+            <a class="mob-socials__link" href="#">Facebook</a>
+          </li>
+          <li class="mob-socials__item">
+            <a class="mob-socials__link" href="#">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
   
+
+
+
+  
   <main>
+    
     <section class="hero section">
       <div class="container">
-        <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
-        <button class="common-button" type="button" data-modal-open>Замовити послугу</button>
+        <h1 class="hero__title">Ефективні рішення для<br> вашого бізнесу</h1>
+        <button class="common-button common-button--hero" type="button" data-modal-open>Замовити послугу</button>
       </div>
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
@@ -89,7 +138,9 @@
             <label class="order__checkbox-label">
               <input class="order__checkbox-input" type="checkbox" name="agreement" value="user_agreement">
               <span class="order__icon-checkbox"></span>
+              <span class="order__te">
             Погоджуюся з розсилкою та приймаю&nbsp;<a class="order__agreement_link" href="#">Умови договору</a>
+              </span>
             </label>
 
             <div class="order__submit-btn-wrap">
@@ -100,9 +151,9 @@
       </div>
     </section>
     
+    
     <section class="features section">
       <div class="container">
-        <!-- h2 Особливості скритий-->
         <h2 class="features__title">Особливості</h2>
         <ul class="features__list">
           <li class="features__card">
@@ -147,36 +198,47 @@
     
     <section class="services section">
       <div class="container">
-        <h2 class="services__title">Чим ми займаємося</h2>
+        <h2 class="global-title">Чим ми займаємося</h2>
         <ul class="services__list">
           <li class="services__item">
             <div class="services__wrap">
-              <img class="services__image" src="./images/typing.jpg" alt="людина верстає сайт" width="370">
+              <img class="services__image" srcset="./images//desc/typing-desc.jpg 1x, ./images//desc/typing-desc-retina.jpg 2x" 
+              src="./images//desc/typing-desc.jpg" alt="людина верстає сайт" width="370">
               <p class="services__label">Десктопні додатки</p>
             </div>
           </li>
           <li class="services__item">
             <div class="services__wrap">
-              <img class="services__image" src="./images/smartphone.jpg" alt="людина створює интерфейс" width="370">
+              <img class="services__image" srcset="./images//desc/smartphone-desc.jpg 1x, ./images//desc/smartphone-desc-retina.jpg 2x" 
+              src="./images/desc/smartphone-desc.jpg" alt="людина створює интерфейс" width="370">
               <p class="services__label">Мобільні додатки</p>
             </div>
           </li>
           <li class="services__item">
             <div class="services__wrap">
-              <img class="services__image" src="./images/color-palette.jpg" alt="людина створює дизайн" width="370">
+              <img class="services__image" srcset="./images//desc/color-palette-desc.jpg 1x, ./images//desc/color-palette-desc-retina.jpg 2x"
+               src="./images/desc/color-palette-desc.jpg" alt="людина створює дизайн" width="370">
               <p class="services__label">Дизайнерські рішення</p>
             </div>
           </li>
         </ul>
       </div>
     </section>
-    
+
     <section class="team section">
       <div class="container">
-        <h2 class="team__title">Наша команда</h2>
+        <h2 class="global-title">Наша команда</h2>
         <ul class="team__card-list">
           <li class="team__card">
-            <img class="team__member-image" src="./images/igor-demyanenko.jpg" alt="Ігор Дем'яненко" width="270">
+            <picture>
+              <source srcset="./images/desc/igor-demyanenko-desc.jpg 1x, ./images/desc/igor-demyanenko-desc-retina.jpg 2x"
+                media="(min-width: 1200px)" />
+              <source srcset="./images/tab/igor-demyanenko-tab.jpg 1x, ./images/tab/igor-demyanenko-tab-retina.jpg 2x"
+                media="(min-width: 768px)" />
+              <source srcset="./images/mob/igor-demyanenko-mob.jpg 1x, ./images/mob/igor-demyanenko-mob-retina.jpg 2x"
+                media="(min-width: 320px)" />
+              <img class="team__member-image" src="./images/desc/igor-demyanenko-desc.jpg" alt="Ігор Дем'яненко" width="100%">
+            </picture>
             <div class="team__meta">
               <h3 class="team__member-name">Ігор Дем'яненко</h3>
               <p class="team__member-position" lang="en">Product Designer</p>
@@ -211,7 +273,15 @@
             </div>
           </li>
           <li class="team__card">
-            <img class="team__member-image" src="./images/olga-repina.jpg" alt="Ольга Рєпіна" width="270">
+            <picture>
+              <source srcset="./images/desc/olga-repina-desc.jpg 1x, ./images/desc/olga-repina-desc-retina.jpg 2x"
+                media="(min-width: 1200px)" />
+              <source srcset="./images/tab/olga-repina-tab.jpg 1x, ./images/tab/olga-repina-tab-retina.jpg 2x"
+                media="(min-width: 768px)" />
+              <source srcset="./images/mob/olga-repina-mob.jpg 1x, ./images/mob/olga-repina-mob-retina.jpg 2x"
+                media="(min-width: 320px)" />
+              <img class="team__member-image" src="./images/desc/olga-repina-desc.jpg" alt="Ольга Рєпіна" width="100%">
+            </picture>
             <div class="team__meta">
               <h3 class="team__member-name">Ольга Рєпіна</h3>
               <p class="team__member-position" lang="en">Frontend Developer</p>
@@ -246,7 +316,15 @@
             </div>
           </li>
           <li class="team__card">
-            <img class="team__member-image" src="./images/mykola-tarasov.jpg" alt="Микола Тарасов" width="270">
+            <picture>
+              <source srcset="./images/desc/mykola-tarasov-desc.jpg 1x, ./images/desc/mykola-tarasov-desc-retina.jpg 2x"
+                media="(min-width: 1200px)" />
+              <source srcset="./images/tab/mykola-tarasov-tab.jpg 1x, ./images/tab/mykola-tarasov-tab-retina.jpg 2x"
+                media="(min-width: 768px)" />
+              <source srcset="./images/mob/mykola-tarasov-mob.jpg 1x, ./images/mob/mykola-tarasov-mob-retina.jpg 2x"
+                media="(min-width: 320px)" />
+              <img class="team__member-image" src="./images/desc/mykola-tarasov-desc.jpg" alt="Микола Тарасов" width="100%">
+            </picture>
             <div class="team__meta">
               <h3 class="team__member-name">Микола Тарасов</h3>
               <p class="team__member-position" lang="en">Marketing</p>
@@ -281,8 +359,16 @@
             </div>
           </li>
           <li class="team__card">
-            <img class="team__member-image" src="./images/myhailo-ermakov.jpg" alt="Михайло Єрмаков" width="270">
-            <div  class="team__meta">
+            <picture>
+              <source srcset="./images/desc/myhailo-ermakov-desc.jpg 1x, ./images/desc/myhailo-ermakov-desc-retina.jpg 2x"
+                media="(min-width: 1200px)" />
+              <source srcset="./images/tab/myhailo-ermakov-tab.jpg 1x, ./images/tab/myhailo-ermakov-tab-retina.jpg 2x"
+                media="(min-width: 768px)" />
+              <source srcset="./images/mob/myhailo-ermakov-mob.jpg 1x, ./images/mob/myhailo-ermakov-mob-retina.jpg 2x"
+                media="(min-width: 320px)" />
+              <img class="team__member-image" src="./images/desc/myhailo-ermakov-desc.jpg" alt="Михайло Єрмаков" width="100%">
+            </picture>
+            <div class="team__meta">
               <h3 class="team__member-name">Михайло Єрмаков</h3>
               <p class="team__member-position" lang="en">UI Designer</p>
               <ul class="socials">
@@ -318,10 +404,10 @@
         </ul>
       </div>
     </section>
-
+   
     <section class="clients section">
       <div class="container">
-        <h2 class="clients__title">Постійні клієнти</h2>
+        <h2 class="global-title">Постійні клієнти</h2>
         <ul class="clients__list">
           <li class="clients__item">
             <a class="clients__link" href="#">
@@ -368,7 +454,6 @@
         </ul>
       </div>
     </section>
-
 
   </main>
 
@@ -430,7 +515,7 @@
         <p class="subscribe__text">Підпишіться на розсилку</p>
         <form class="subscribe__form" name="subscribe">
           <input class="subscribe__input" type="email" name="email" placeholder="E-mail">
-          <button class="common-button subscribe__common-button" type="submit">Підписатися
+          <button class="common-button common-button--subscribe" type="submit">Підписатися
             <svg class="subscribe__icon" width="24px" height="24px">
               <use href="./images/icons.svg#icon-send"></use>
             </svg>
@@ -441,5 +526,6 @@
   </footer>
  
   <script src="./js/modal.js"></script>
+  <script src="./js/mobile-menu.js"></script>
 </body>
 </html>

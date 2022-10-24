@@ -17,15 +17,49 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  @media screen and(min-width: 480px){
+    width: 480px;
+  }
+  @media screen and(min-width: 768px){
+    width: 768px;
+  }
+  @media screen and(min-width: 1200px){
+    width: 1200px;    
+  }
+}
+
+.global-title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+  color: var(--title-color);
+  text-align: center;
+  min-width: 264px;
+  margin-bottom: 30px;
+
+  @media screen and(min-width: 1200px) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17
+  }
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   text-align: center;
+  @media screen and(min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
