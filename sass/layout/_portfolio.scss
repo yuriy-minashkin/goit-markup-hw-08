@@ -6,12 +6,17 @@
 
 .filter {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-
-  &__item:not(:last-child) {
-    margin-right: 8px;
-  }
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-bottom: 40px;
+  gap: 8px;
+  @media screen and(min-width: 768px) {
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    @media screen and(min-width: 1200px) {
+      margin-bottom: 50px;
+    }
 
   &__button {
     display: inline-block;
@@ -41,8 +46,11 @@
 .samples {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   gap: 30px;
+  @media screen and(min-width: 768px) {
+      
+    }
 }
 
 .samples__link {
@@ -93,7 +101,7 @@
 }
 
 .samples__meta {
-  width: 370px;
+  width: 100%;
   border: 1px solid var(--card-border);
   border-top: none;
   background-color: var(--primary-background-color);
@@ -101,7 +109,7 @@
 }
 
 .samples__subtitle {
-  width: 322px;
+  width: 100%;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -112,7 +120,7 @@
 }
 
 .samples__description {
-  width: 322px;
+  width: 100%;
   font-size: 16px;
   line-height: 1.87;
   text-align: left;
