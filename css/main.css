@@ -95,7 +95,6 @@ body {
   display: block;
   max-width: 100%;
   height: auto;
-  width: 100%;
 }
 
 :root {
@@ -831,6 +830,7 @@ body {
   }
 }
 .team__member-image {
+  width: 100%;
   display: block;
 }
 .team__meta {
@@ -950,6 +950,7 @@ body {
 
 .samples__image {
   display: block;
+  width: 100%;
 }
 
 .samples__text-overlay {
